@@ -22,17 +22,44 @@
 .deck-header{top:0;left:0;right:0;margin:0;padding:18px 40px;background:rgb(54,114,94);color:#fff}
 .deck-header .eyebrow{color:#fff}
 @media print{.deck-header{position:absolute!important;display:flex!important}}
+
+/* Cover hero — dark green + gold, modern take on the official BAAC cover template */
+.cover-hero{
+  background:
+    radial-gradient(900px 500px at 78% 8%, rgba(255,255,255,.07), transparent 60%),
+    radial-gradient(700px 500px at 15% 95%, rgba(217,180,92,.10), transparent 65%),
+    linear-gradient(150deg,#08241b 0%,rgb(54,114,94) 55%,#08241b 125%);
+  overflow:hidden;
+}
+.cover-hero::before{
+  content:"";position:absolute;top:-25%;left:-20%;width:46%;height:160%;
+  background:linear-gradient(160deg,rgba(217,180,92,.45) 0%,rgba(217,180,92,0) 55%);
+  transform:rotate(7deg);filter:blur(50px);pointer-events:none;
+}
+.cover-hero::after{
+  content:"";position:absolute;top:0;left:-6%;width:3px;height:100%;
+  background:linear-gradient(180deg,rgba(255,214,120,0) 0%,rgba(255,214,120,.75) 35%,rgba(255,214,120,.75) 65%,rgba(255,214,120,0) 100%);
+  transform:rotate(7deg);pointer-events:none;
+}
+.cover-hero .kicker{color:#e9d6a0}
+.cover-hero .h1{color:#fff}
+.cover-hero .h1 .accent-gold{color:#e9c977}
+.cover-hero .lede{color:rgba(255,255,255,.85)}
+.cover-hero .pill{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.28)}
+.cover-hero .pill-accent{background:rgba(217,180,92,.22);color:#f4e6b8;border-color:rgba(217,180,92,.55)}
+.cover-hero .deck-footer .dim2{color:rgba(255,255,255,.65)}
+.cover-hero .deck-footer .slide-number{color:rgba(255,255,255,.65)}
 </style>
 </head>
 <body data-themes="minimal-white,corporate-clean,swiss-grid,arctic-cool,academic-paper" data-theme-base="assets/themes/">
 <div class="deck">
 
   <!-- 1. Cover -->
-  <section class="slide is-active center tc" data-title="ปก">
+  <section class="slide is-active center tc cover-hero" data-title="ปก">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <div style="max-width:980px">
+    <div style="max-width:980px;position:relative;z-index:1">
       <p class="kicker">รายงานผลการดำเนินงาน · งานบริหารสินเชื่อและบริหารจัดการหนี้</p>
-      <h1 class="h1 anim-rise-in" data-anim="rise-in">สรุปตัวชี้วัดฯ ตอ.<br><span class="gradient-text">ปีบัญชี 2569</span></h1>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in">สรุปตัวชี้วัดฯ ตอ.<br><span class="accent-gold">ปีบัญชี 2569</span></h1>
       <p class="lede" style="margin:0 auto">ธ.ก.ส. สาขาสมุทรปราการ · ภาคตะวันออก (ตอ.)</p>
       <div class="row wrap mt-l" style="justify-content:center;gap:8px">
         <span class="pill pill-accent">หมวดที่ 1 · ผลงาน 95 คะแนน</span>
