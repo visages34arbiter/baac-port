@@ -82,6 +82,30 @@
   background:rgba(255,255,255,.95);display:inline-flex;align-items:center;justify-content:center;
   font-size:12px;color:#8a5a1a;
 }
+
+/* Slide 3 — full scorecard, recreated close to the official ตอ. table */
+.scorecard-slide{padding:0!important;overflow:hidden}
+.scorecard-slide .sc-titlebar{
+  position:relative;display:flex;align-items:center;gap:16px;
+  background:linear-gradient(90deg,#0f3d2c 0%,rgb(54,114,94) 45%,#1a5c42 100%);
+  padding:14px 40px 12px 96px;border-bottom:4px solid #d9a531;
+}
+.scorecard-slide .sc-badge{
+  width:44px;height:44px;border-radius:50%;flex:none;
+  background:#0c2740;border:3px solid #d9a531;
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.scorecard-slide .sc-title{color:#fff;font-weight:800;font-size:24px;letter-spacing:.02em;text-shadow:0 2px 6px rgba(0,0,0,.35)}
+.scorecard-slide .sc-body{padding:12px 28px 10px}
+.sc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+table.sc{width:100%;border-collapse:collapse;font-size:12px}
+table.sc td,table.sc th{padding:5px 6px;border-bottom:1px solid #e2e8e4;line-height:1.3}
+table.sc th{background:#1a5c42;color:#fff;font-weight:700;text-align:left;font-size:11px}
+table.sc th.c,table.sc td.c{text-align:center;white-space:nowrap}
+table.sc tr.sec td{background:#e7efe8;font-weight:700}
+table.sc tr.total td{background:#d9a531;color:#3a2a10;font-weight:800}
+table.sc tr.sub2 td{background:#f4f7f4;font-style:italic;color:#3a5a4a}
+table.sc.sc-mini{margin-top:10px}
 </style>
 </head>
 <body data-themes="minimal-white,corporate-clean,swiss-grid,arctic-cool,academic-paper" data-theme-base="assets/themes/">
@@ -118,19 +142,84 @@
     <div class="notes">สไลด์นี้เป็น mockup ชั่วคราว รอไฟล์วิดีโอ/ภาพเปิดเรื่องจริงจากผู้ใช้เพื่อนำมาแทนที่</div>
   </section>
 
-  <!-- 3. ภาพรวมคะแนนรวม -->
-  <section class="slide" data-title="ภาพรวมคะแนน">
-    <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">ภาพรวม · Overview</p>
-    <h2 class="h2">โครงสร้างคะแนนตัวชี้วัด ปีบัญชี 2569</h2>
-    <div class="grid g3 mt-l anim-stagger-list" data-anim-target>
-      <div class="card card-accent"><p class="eyebrow">หมวดที่ 1 · ผลงาน</p><div style="font-size:56px;font-weight:800"><span class="counter" data-to="95">0</span></div><p class="dim">13 ตัวชี้วัด (สินเชื่อ / คุณภาพหนี้ / เงินฝาก)</p></div>
-      <div class="card card-accent"><p class="eyebrow">หมวดที่ 2 · กระบวนการ</p><div style="font-size:56px;font-weight:800"><span class="counter" data-to="5">0</span></div><p class="dim">1 ตัวชี้วัด (นวัตกรรม)</p></div>
-      <div class="card"><p class="eyebrow">รวมคะแนนเป้าหมาย</p><div style="font-size:56px;font-weight:800"><span class="counter" data-to="100">0</span></div><p class="dim" style="color:var(--text-3)">ผลคะแนนจริง: รอข้อมูล</p></div>
+  <!-- 3. ภาพรวมคะแนนรวม (ตารางเต็ม) -->
+  <section class="slide scorecard-slide" data-title="ภาพรวมคะแนน (ตารางเต็ม)">
+    <div class="sc-titlebar">
+      <div class="sc-badge">🏦</div>
+      <div class="sc-title">สรุปตัวชี้วัดฯ ตอ. ปีบัญชี 2569</div>
     </div>
-    <p class="dim2 mt-l" style="font-size:14px">* ตัวเลขเป้าหมาย/น้ำหนักคะแนนอ้างอิงตารางตัวชี้วัดฯ ตอ. ปีบัญชี 2569 — ผลงานจริงจะปรับปรุงหลังปิดรอบประเมิน</p>
-    <div class="deck-footer"><span class="dim2">ภาพรวมคะแนน</span><span class="slide-number" data-current="3" data-total="15"></span></div>
-    <div class="notes">อธิบายว่าคะแนนรวม 100 แบ่งเป็น 2 หมวด และทุกตัวเลขในสไลด์ถัดไปคือ "เป้าหมาย" ส่วน "ผลงานจริง" จะกรอกทีหลัง</div>
+    <div class="sc-body">
+    <div class="sc-wrap">
+      <table class="sc">
+        <thead><tr><th>ตัวชี้วัด</th><th class="c">เป้าหมาย</th><th class="c">คะแนน</th></tr></thead>
+        <tbody>
+          <tr class="sec"><td colspan="3">1. SME เกษตรหัวขบวนใหม่ IRDP</td></tr>
+          <tr><td>1.1 SME เกษตรหัวขบวนได้รับการพัฒนา</td><td class="c">105 ราย</td><td class="c">3.5</td></tr>
+          <tr><td>1.2 ลูกค้า SME เกษตรหัวขบวนได้รับการพัฒนา มีรายได้/ปริมาณธุรกิจเพิ่มขึ้น ≥ ร้อยละ 10</td><td class="c">100 ราย</td><td class="c">3.5</td></tr>
+          <tr><td>2. โครงการสนับสนุนสินเชื่อ ESG ทั้งอุตสาหกรรมสีเขียวและสีน้ำเงิน IRDP</td><td class="c">509 ลบ.</td><td class="c">6</td></tr>
+          <tr><td>3. รับลูกค้าสินเชื่อรายใหม่ (เฉพาะเกษตรกร 603) IRDP</td><td class="c">7,009 ราย</td><td class="c">5</td></tr>
+          <tr class="sec"><td colspan="3">4. การเติบโตสินเชื่อ Normal Port</td></tr>
+          <tr><td>4.1 Normal Port</td><td class="c">265 ลบ.</td><td class="c">4</td></tr>
+          <tr><td>4.2 Secure Port IRDP</td><td class="c">1,000 ลบ.</td><td class="c">7</td></tr>
+          <tr class="sec"><td colspan="3">5. การจ่ายสินเชื่อในปีบัญชี 2569 (รายไตรมาส) NEW</td></tr>
+          <tr><td>5.1 การจ่ายสินเชื่อมากกว่าวันชำระหนี้ในไตรมาสที่ 1 - 2</td><td class="c">มากกว่า ร้อยละ 3</td><td class="c">1.8</td></tr>
+          <tr><td>5.2 การจ่ายสินเชื่อมากกว่าวันชำระหนี้ในไตรมาสที่ 3</td><td class="c">มากกว่า ร้อยละ 3</td><td class="c">0.75</td></tr>
+          <tr><td>5.3 การจ่ายสินเชื่อมากกว่าวันชำระหนี้ในไตรมาสที่ 4</td><td class="c">มากกว่า ร้อยละ 3</td><td class="c">0.45</td></tr>
+          <tr class="sec"><td colspan="3">6. อัตรารับชำระหนี้</td></tr>
+          <tr class="sub2"><td colspan="3">6.1 อัตรารับชำระหนี้ (สำรอง 1%) ณ สิ้นเดือนที่ 2</td></tr>
+          <tr><td>6.1.1 หนี้ถึงกำหนดชำระเดือนเมษายน 2569 ณ 30 มิถุนายน 2569</td><td class="c">95%</td><td class="c">0.9</td></tr>
+          <tr><td>6.1.2 หนี้ถึงกำหนดชำระเดือนพฤษภาคม 2569 ณ 31 กรกฎาคม 2569</td><td class="c">95%</td><td class="c">0.9</td></tr>
+          <tr><td>6.1.3 หนี้ถึงกำหนดชำระเดือนมิถุนายน 2569 ณ 31 สิงหาคม 2569</td><td class="c">95%</td><td class="c">1.15</td></tr>
+          <tr><td>6.1.4 หนี้ถึงกำหนดชำระเดือนกรกฎาคม 2569 ณ 30 กันยายน 2569</td><td class="c">95%</td><td class="c">0.9</td></tr>
+          <tr><td>6.1.5 หนี้ถึงกำหนดชำระเดือนสิงหาคม 2569 ณ 31 ตุลาคม 2569</td><td class="c">95%</td><td class="c">0.9</td></tr>
+          <tr><td>6.1.6 หนี้ถึงกำหนดชำระเดือนกันยายน 2569 ณ 30 พฤศจิกายน 2569</td><td class="c">95%</td><td class="c">1.15</td></tr>
+          <tr><td>6.1.7 หนี้ถึงกำหนดชำระเดือนตุลาคม 2569 ณ 31 ธันวาคม 2569</td><td class="c">95%</td><td class="c">0.9</td></tr>
+          <tr><td>6.1.8 หนี้ถึงกำหนดชำระเดือนพฤศจิกายน 2569 ณ 31 มกราคม 2570</td><td class="c">95%</td><td class="c">0.9</td></tr>
+          <tr><td>6.1.9 หนี้ถึงกำหนดชำระเดือนธันวาคม 2569 ณ 28 กุมภาพันธ์ 2570</td><td class="c">95%</td><td class="c">1.15</td></tr>
+          <tr><td>6.1.10 หนี้ถึงกำหนดชำระเดือนมกราคม 2570 ณ 31 มีนาคม 2570</td><td class="c">95%</td><td class="c">1.15</td></tr>
+        </tbody>
+      </table>
+      <table class="sc">
+        <thead><tr><th>ตัวชี้วัด</th><th class="c">เป้าหมาย</th><th class="c">คะแนน</th></tr></thead>
+        <tbody>
+          <tr class="sub2"><td colspan="3">6.2 อัตรารับชำระหนี้ ณ สิ้นเดือนที่ 3 IRDP</td></tr>
+          <tr><td>6.2.1 หนี้ถึงกำหนดชำระเดือนมกราคม 2569 ณ 30 เมษายน 2569</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.2 หนี้ถึงกำหนดชำระเดือนกุมภาพันธ์ 2569 ณ 31 พฤษภาคม 2569</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.3 หนี้ถึงกำหนดชำระเดือนมีนาคม 2569 ณ 30 มิถุนายน 2569</td><td class="c">98.50%</td><td class="c">0.8</td></tr>
+          <tr><td>6.2.4 หนี้ถึงกำหนดชำระเดือนเมษายน 2569 ณ 31 กรกฎาคม 2569</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.5 หนี้ถึงกำหนดชำระเดือนพฤษภาคม 2569 ณ 31 สิงหาคม 2569</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.6 หนี้ถึงกำหนดชำระเดือนมิถุนายน 2569 ณ 30 กันยายน 2569</td><td class="c">98.50%</td><td class="c">0.8</td></tr>
+          <tr><td>6.2.7 หนี้ถึงกำหนดชำระเดือนกรกฎาคม 2569 ณ 31 ตุลาคม 2569</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.8 หนี้ถึงกำหนดชำระเดือนสิงหาคม 2569 ณ 30 พฤศจิกายน 2569</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.9 หนี้ถึงกำหนดชำระเดือนกันยายน 2569 ณ 31 ธันวาคม 2569</td><td class="c">98.50%</td><td class="c">0.8</td></tr>
+          <tr><td>6.2.10 หนี้ถึงกำหนดชำระเดือนตุลาคม 2569 ณ 31 มกราคม 2570</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.11 หนี้ถึงกำหนดชำระเดือนพฤศจิกายน 2569 ณ 28 กุมภาพันธ์ 2570</td><td class="c">98.50%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.12 หนี้ถึงกำหนดชำระเดือนธันวาคม 2569 ณ 31 มีนาคม 2570</td><td class="c">98.50%</td><td class="c">0.8</td></tr>
+          <tr><td>6.2.13 หนี้ถึงกำหนดชำระเดือนมกราคม 2570 ณ 31 มีนาคม 2570</td><td class="c">95.00%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.14 หนี้ถึงกำหนดชำระเดือนกุมภาพันธ์ 2570 ณ 31 มีนาคม 2570</td><td class="c">92.00%</td><td class="c">0.6</td></tr>
+          <tr><td>6.2.15 หนี้ถึงกำหนดชำระเดือนมีนาคม 2570 ณ 31 มีนาคม 2570</td><td class="c">90.00%</td><td class="c">0.8</td></tr>
+          <tr><td>7. รับชำระต้นเงินและดอกเบี้ยค้าง (ต้นเงินกลับมารับรู้รายได้ AA) สัญญาที่มีต้นเงินรับรู้รายได้เกณฑ์คงค้าง (AA) ย้ายเสื่อมสิ้นปีบัญชี NEW</td><td class="c">เพิ่มขึ้น 0.75% (67.82%)</td><td class="c">5</td></tr>
+          <tr><td>8. รับชำระดอกเบี้ยค้างรับที่ไม่รับรู้รายได้เกณฑ์เงินสด (NA)</td><td class="c">514 ลบ.</td><td class="c">8</td></tr>
+          <tr><td>9. Net NPLs IRDP</td><td class="c">ไม่เกิน 1,928 ลบ.</td><td class="c">5</td></tr>
+          <tr><td>10. เงินรับฝากเพิ่ม (Deposit Growth)</td><td class="c">3,023 ลบ.</td><td class="c">5</td></tr>
+          <tr><td>11. รายได้ค่าธรรมเนียม + เงินฝากสงเคราะห์ชีวิต*</td><td class="c">320 ลบ.</td><td class="c">6</td></tr>
+          <tr><td>12. อัตราการรับชำระสัญญาที่มีดอกเบี้ยค้างชำระเกิน 15 เดือนไปเงินสด*</td><td class="c">70%</td><td class="c">8</td></tr>
+          <tr><td>13. แก้ไขหนี้ SM ให้กลับมามีสถานะ PL เพื่อลดการกันสำรอง NEW</td><td class="c">ร้อยละ 5 (327 ลบ.)</td><td class="c">3</td></tr>
+          <tr class="total"><td>รวม</td><td class="c"></td><td class="c">95</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <table class="sc sc-mini" style="max-width:640px;margin-left:auto;margin-right:0">
+      <thead><tr><th colspan="3" style="text-align:center">หมวดที่ 2 กระบวนการ</th></tr><tr><th>ตัวชี้วัด</th><th class="c">เป้าหมาย</th><th class="c">คะแนน</th></tr></thead>
+      <tbody>
+        <tr><td>1. นวัตกรรม</td><td class="c">xx</td><td class="c">5</td></tr>
+        <tr class="total"><td>รวม</td><td class="c"></td><td class="c">5</td></tr>
+        <tr class="total"><td>รวมคะแนน 2 หมวด</td><td class="c"></td><td class="c">100</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="deck-footer"><span class="dim2">ภาพรวมคะแนน (ตารางเต็ม)</span><span class="slide-number" data-current="3" data-total="15"></span></div>
+    <div class="notes">ตารางนี้คือค่าเป้าหมาย/น้ำหนักคะแนนตามคำรับรองฯ ตัวเต็ม — สไลด์ถัดไปจะแจกแจงทีละหมวดให้อ่านง่ายขึ้น พร้อมช่องผลงานจริงที่จะกรอกทีหลัง</div>
   </section>
 
   <!-- 4. ข้อ 1-2 -->
