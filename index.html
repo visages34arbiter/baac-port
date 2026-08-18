@@ -49,6 +49,39 @@
 .cover-hero .pill-accent{background:rgba(217,180,92,.22);color:#f4e6b8;border-color:rgba(217,180,92,.55)}
 .cover-hero .deck-footer .dim2{color:rgba(255,255,255,.65)}
 .cover-hero .deck-footer .slide-number{color:rgba(255,255,255,.65)}
+.cover-hero .deck-header{display:none}
+
+/* Slide 2 — temporary mockup standing in for the rice-field/logo intro video */
+.mockup-hero{
+  background:
+    radial-gradient(1100px 550px at 50% -15%, rgba(255,255,255,.4), transparent 60%),
+    linear-gradient(180deg,#f8dd94 0%,#e3b65e 45%,#b78a3c 100%);
+  overflow:hidden;
+}
+.mockup-hero::before{
+  content:"";position:absolute;inset:0;
+  background:repeating-conic-gradient(from 0deg at 50% -25%, rgba(255,255,255,.22) 0deg 1.2deg, transparent 1.2deg 9deg);
+  mix-blend-mode:overlay;pointer-events:none;
+}
+.mockup-badge{
+  width:160px;height:160px;border-radius:36px;
+  background:linear-gradient(145deg,#123a5e,#0c2740);
+  border:6px solid #d9b45c;
+  display:flex;align-items:center;justify-content:center;
+  font-size:64px;line-height:1;
+  box-shadow:0 20px 50px rgba(0,0,0,.28);
+  margin:0 auto 28px;
+}
+.mockup-frame{
+  border:2px dashed rgba(58,42,16,.55);border-radius:16px;
+  padding:12px 24px;display:inline-flex;align-items:center;gap:10px;
+  color:#3a2a10;background:rgba(255,255,255,.4);font-weight:600;font-size:15px;
+}
+.mockup-frame .play{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  background:rgba(255,255,255,.95);display:inline-flex;align-items:center;justify-content:center;
+  font-size:12px;color:#8a5a1a;
+}
 </style>
 </head>
 <body data-themes="minimal-white,corporate-clean,swiss-grid,arctic-cool,academic-paper" data-theme-base="assets/themes/">
@@ -67,11 +100,25 @@
         <span class="pill">รวม 100 คะแนน</span>
       </div>
     </div>
-    <div class="deck-footer"><span class="dim2">ปก</span><span class="slide-number" data-current="1" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ปก</span><span class="slide-number" data-current="1" data-total="15"></span></div>
     <div class="notes">แนะนำตัว ชื่อ ตำแหน่ง และขอบเขตงานที่รับผิดชอบ (บริหารสินเชื่อและบริหารจัดการหนี้) ก่อนเข้าเนื้อหา</div>
   </section>
 
-  <!-- 2. ภาพรวมคะแนนรวม -->
+  <!-- 2. ภาพเปิดเรื่อง (Mockup) -->
+  <section class="slide center tc mockup-hero" data-title="ภาพเปิดเรื่อง (Mockup)">
+    <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div style="position:relative;z-index:1">
+      <div class="mockup-badge">🏦</div>
+      <p class="kicker" style="color:#5a3e12">MOCKUP · จะแทนที่ด้วยวิดีโอจริง</p>
+      <h2 class="h2" style="color:#3a2a10">ธ.ก.ส. สาขาสมุทรปราการ</h2>
+      <p class="lede" style="color:#5a3e12;margin:0 auto 24px">ทุ่งข้าวสีทอง · แสงยามเช้า · โลโก้ ธ.ก.ส.</p>
+      <span class="mockup-frame"><span class="play">▶</span> พื้นที่สำหรับวิดีโอ/ภาพเปิดเรื่อง — จะใส่ภายหลัง</span>
+    </div>
+    <div class="deck-footer"><span class="dim2">Mockup</span><span class="slide-number" data-current="2" data-total="15"></span></div>
+    <div class="notes">สไลด์นี้เป็น mockup ชั่วคราว รอไฟล์วิดีโอ/ภาพเปิดเรื่องจริงจากผู้ใช้เพื่อนำมาแทนที่</div>
+  </section>
+
+  <!-- 3. ภาพรวมคะแนนรวม -->
   <section class="slide" data-title="ภาพรวมคะแนน">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">ภาพรวม · Overview</p>
@@ -82,11 +129,11 @@
       <div class="card"><p class="eyebrow">รวมคะแนนเป้าหมาย</p><div style="font-size:56px;font-weight:800"><span class="counter" data-to="100">0</span></div><p class="dim" style="color:var(--text-3)">ผลคะแนนจริง: รอข้อมูล</p></div>
     </div>
     <p class="dim2 mt-l" style="font-size:14px">* ตัวเลขเป้าหมาย/น้ำหนักคะแนนอ้างอิงตารางตัวชี้วัดฯ ตอ. ปีบัญชี 2569 — ผลงานจริงจะปรับปรุงหลังปิดรอบประเมิน</p>
-    <div class="deck-footer"><span class="dim2">ภาพรวมคะแนน</span><span class="slide-number" data-current="2" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ภาพรวมคะแนน</span><span class="slide-number" data-current="3" data-total="15"></span></div>
     <div class="notes">อธิบายว่าคะแนนรวม 100 แบ่งเป็น 2 หมวด และทุกตัวเลขในสไลด์ถัดไปคือ "เป้าหมาย" ส่วน "ผลงานจริง" จะกรอกทีหลัง</div>
   </section>
 
-  <!-- 3. ข้อ 1-2 -->
+  <!-- 4. ข้อ 1-2 -->
   <section class="slide" data-title="ข้อ 1-2 SME/ESG">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 1-2</p>
@@ -101,11 +148,11 @@
       </tbody>
     </table>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 1-2</span><span class="slide-number" data-current="3" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 1-2</span><span class="slide-number" data-current="4" data-total="15"></span></div>
     <div class="notes">เจาะจงว่าสาขามีลูกค้ากลุ่ม SME เกษตรหัวขบวนกี่รายที่เข้าเกณฑ์แล้ว และความคืบหน้าโครงการ ESG</div>
   </section>
 
-  <!-- 4. ข้อ 3-4 -->
+  <!-- 5. ข้อ 3-4 -->
   <section class="slide" data-title="ข้อ 3-4 ลูกค้าใหม่/Port Growth">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 3-4</p>
@@ -120,11 +167,11 @@
       </tbody>
     </table>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 3-4</span><span class="slide-number" data-current="4" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 3-4</span><span class="slide-number" data-current="5" data-total="15"></span></div>
     <div class="notes">เน้นว่าการเติบโต Port แยกเป็น Normal และ Secure คนละน้ำหนักคะแนน</div>
   </section>
 
-  <!-- 5. ข้อ 5 -->
+  <!-- 6. ข้อ 5 -->
   <section class="slide" data-title="ข้อ 5 จ่ายสินเชื่อรายไตรมาส">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 5 (NEW)</p>
@@ -140,33 +187,33 @@
       </tbody>
     </table>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 5</span><span class="slide-number" data-current="5" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 5</span><span class="slide-number" data-current="6" data-total="15"></span></div>
     <div class="notes">ตัวชี้วัดใหม่ (NEW) ปีนี้ — น้ำหนักคะแนนลดลงตามไตรมาสที่ผ่านไป เน้นจ่ายสินเชื่อให้ทันช่วงต้นปี</div>
   </section>
 
-  <!-- 6. ข้อ 6.1 -->
+  <!-- 7. ข้อ 6.1 -->
   <section class="slide" data-title="ข้อ 6.1 อัตรารับชำระหนี้ สิ้นเดือน 2">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 6.1</p>
     <h2 class="h2">อัตรารับชำระหนี้ (สำรอง 1%) ณ สิ้นเดือนที่ 2</h2>
     <div class="card mt-l" style="height:440px;padding:24px"><canvas id="chart61"></canvas></div>
     <p class="dim2 mt-s" style="font-size:14px">* เป้าหมายร้อยละ 95 ทุกงวดเดือน — เส้นผลงานจริงจะเพิ่มหลังปิดแต่ละงวด</p>
-    <div class="deck-footer"><span class="dim2">ข้อ 6.1</span><span class="slide-number" data-current="6" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 6.1</span><span class="slide-number" data-current="7" data-total="15"></span></div>
     <div class="notes">อธิบายว่า "สิ้นเดือนที่ 2" หมายถึงหนี้ถึงกำหนดชำระเดือนใด แล้วนับไปอีก 2 เดือนคือวันตรวจสอบ</div>
   </section>
 
-  <!-- 7. ข้อ 6.2 -->
+  <!-- 8. ข้อ 6.2 -->
   <section class="slide" data-title="ข้อ 6.2 อัตรารับชำระหนี้ สิ้นเดือน 3">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 6.2 (IRDP)</p>
     <h2 class="h2">อัตรารับชำระหนี้ ณ สิ้นเดือนที่ 3</h2>
     <div class="card mt-l" style="height:440px;padding:24px"><canvas id="chart62"></canvas></div>
     <p class="dim2 mt-s" style="font-size:14px">* เป้าหมายลดหลั่นจากร้อยละ 98.5 → 95.0 → 92.0 → 90.0 ในงวดท้ายปี — เส้นผลงานจริงจะเพิ่มหลังปิดแต่ละงวด</p>
-    <div class="deck-footer"><span class="dim2">ข้อ 6.2</span><span class="slide-number" data-current="7" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 6.2</span><span class="slide-number" data-current="8" data-total="15"></span></div>
     <div class="notes">เน้นงวดท้ายปี (ม.ค.-มี.ค. 2570) ที่เป้าหมายลดลง เพราะเป็นหนี้ใกล้ปิดปีบัญชีที่ตรวจสอบเข้มขึ้น</div>
   </section>
 
-  <!-- 8. ข้อ 7-8 -->
+  <!-- 9. ข้อ 7-8 -->
   <section class="slide" data-title="ข้อ 7-8 รับชำระต้น/ดอกเบี้ยค้าง">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 7-8</p>
@@ -175,11 +222,11 @@
       <div class="card"><p class="eyebrow">ข้อ 7 · รับชำระต้นเงิน+ดอกเบี้ยค้าง (AA) NEW</p><h3 class="mt-s">เพิ่มขึ้นร้อยละ 0.75<br><span class="dim">(ต้นเงินรับรู้รายได้เดิม 67.82%)</span></h3><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
       <div class="card"><p class="eyebrow">ข้อ 8 · รับชำระดอกเบี้ยค้างรับ ไม่รับรู้รายได้เกณฑ์เงินสด (NA)</p><div style="font-size:44px;font-weight:800">514 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>8</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 7-8</span><span class="slide-number" data-current="8" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 7-8</span><span class="slide-number" data-current="9" data-total="15"></span></div>
     <div class="notes">AA คือหนี้ที่รับรู้รายได้แล้ว NA คือดอกเบี้ยค้างที่ยังไม่รับรู้รายได้ (เกณฑ์เงินสด)</div>
   </section>
 
-  <!-- 9. ข้อ 9-10 -->
+  <!-- 10. ข้อ 9-10 -->
   <section class="slide" data-title="ข้อ 9-10 Net NPLs/เงินฝากเพิ่ม">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 9-10</p>
@@ -188,11 +235,11 @@
       <div class="card"><p class="eyebrow">ข้อ 9 · Net NPLs IRDP</p><div style="font-size:44px;font-weight:800">ไม่เกิน 1,928 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
       <div class="card"><p class="eyebrow">ข้อ 10 · เงินรับฝากเพิ่ม (Deposit Growth)</p><div style="font-size:44px;font-weight:800">3,023 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 9-10</span><span class="slide-number" data-current="9" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 9-10</span><span class="slide-number" data-current="10" data-total="15"></span></div>
     <div class="notes">Net NPLs ยิ่งต่ำยิ่งดี (เป้าหมายคือเพดานสูงสุดที่ยอมรับได้) ต่างจากตัวชี้วัดอื่นที่ยิ่งสูงยิ่งดี</div>
   </section>
 
-  <!-- 10. ข้อ 11-12 -->
+  <!-- 11. ข้อ 11-12 -->
   <section class="slide" data-title="ข้อ 11-12 ค่าธรรมเนียม/หนี้ค้าง 15 เดือน">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 11-12</p>
@@ -201,11 +248,11 @@
       <div class="card"><p class="eyebrow">ข้อ 11 · รายได้ค่าธรรมเนียม + เงินฝากสงเคราะห์ชีวิต*</p><div style="font-size:44px;font-weight:800">320 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>6</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
       <div class="card"><p class="eyebrow">ข้อ 12 · อัตรารับชำระสัญญาหนี้ค้างเกิน 15 เดือน ไปเงินสด*</p><div style="font-size:44px;font-weight:800"><span class="counter" data-to="70">0</span>%</div><p class="dim mt-s">น้ำหนักคะแนน <b>8</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 11-12</span><span class="slide-number" data-current="10" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 11-12</span><span class="slide-number" data-current="11" data-total="15"></span></div>
     <div class="notes">เครื่องหมาย * ในตารางต้นฉบับหมายถึงมีเงื่อนไขเพิ่มเติม ควรตรวจสอบรายละเอียดกับคำรับรองฉบับเต็มก่อนนำเสนอจริง</div>
   </section>
 
-  <!-- 11. ข้อ 13 -->
+  <!-- 12. ข้อ 13 -->
   <section class="slide center tc" data-title="ข้อ 13 แก้ไขหนี้ SM">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <div>
@@ -214,11 +261,11 @@
       <h3 class="mt-s">แก้ไขหนี้ SM ให้กลับมามีสถานะ PL<br>เพื่อลดการกันสำรอง</h3>
       <p class="lede" style="margin:14px auto 0">เป้าหมาย ร้อยละ 5 (327 ลบ.) · น้ำหนักคะแนน 3</p>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 13</span><span class="slide-number" data-current="11" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">ข้อ 13</span><span class="slide-number" data-current="12" data-total="15"></span></div>
     <div class="notes">SM = Special Mention (หนี้ที่เริ่มค้างชำระ) การผลักกลับเป็น PL (Performing Loan) ช่วยลดภาระการกันสำรองของสาขา</div>
   </section>
 
-  <!-- 12. หมวดที่ 2 -->
+  <!-- 13. หมวดที่ 2 -->
   <section class="slide" data-title="หมวดที่ 2 กระบวนการ">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 2 · กระบวนการ</p>
@@ -234,11 +281,11 @@
         <div style="font-size:56px;font-weight:800"><span class="counter" data-to="5">0</span></div>
       </div>
     </div>
-    <div class="deck-footer"><span class="dim2">หมวดที่ 2</span><span class="slide-number" data-current="12" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">หมวดที่ 2</span><span class="slide-number" data-current="13" data-total="15"></span></div>
     <div class="notes">เป้าหมาย "xx" ยังไม่ระบุตัวเลขในเอกสารต้นฉบับ — ต้องตามข้อมูลจากคำรับรองฉบับเต็มก่อนกรอกจริง</div>
   </section>
 
-  <!-- 13. สรุปผลรวม -->
+  <!-- 14. สรุปผลรวม -->
   <section class="slide" data-title="สรุปผลรวม & แผนขับเคลื่อน">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">สรุป · Next steps</p>
@@ -261,18 +308,18 @@
         <p class="dim" style="color:var(--text-3)">รอระบุ</p>
       </div>
     </div>
-    <div class="deck-footer"><span class="dim2">สรุป</span><span class="slide-number" data-current="13" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">สรุป</span><span class="slide-number" data-current="14" data-total="15"></span></div>
     <div class="notes">สไลด์นี้ตั้งใจเว้นว่างไว้ทั้งหมด — กรอกคะแนนจริงและแผนงานหลังมีข้อมูลผลดำเนินงานจริงของสาขา</div>
   </section>
 
-  <!-- 14. Thanks -->
+  <!-- 15. Thanks -->
   <section class="slide center tc" data-title="ปิดท้าย">
     <div class="deck-header"><span class="eyebrow">🏦 ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <div>
       <h1 class="h1" style="font-size:120px;line-height:1"><span class="gradient-text">ขอบคุณครับ/ค่ะ</span></h1>
       <p class="lede">ธ.ก.ส. สาขาสมุทรปราการ · งานบริหารสินเชื่อและบริหารจัดการหนี้ · ปีบัญชี 2569</p>
     </div>
-    <div class="deck-footer"><span class="dim2">จบการนำเสนอ</span><span class="slide-number" data-current="14" data-total="14"></span></div>
+    <div class="deck-footer"><span class="dim2">จบการนำเสนอ</span><span class="slide-number" data-current="15" data-total="15"></span></div>
   </section>
 
 </div>
