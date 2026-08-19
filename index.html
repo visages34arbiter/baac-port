@@ -11,7 +11,8 @@
 <style>
 /* Thai-first font stack, system fonts only — no webfont download needed (offline-safe). */
 :root{--font-sans:'Noto Sans Thai','Leelawadee UI','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
-  --font-display:'Noto Sans Thai','Leelawadee UI','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;}
+  --font-display:'Noto Sans Thai','Leelawadee UI','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  --bg:#e9ebee;--bg-soft:#eef0f3;}
 .t{width:100%;border-collapse:collapse;font-size:16px}
 .t th,.t td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
 .t th{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);font-weight:600}
@@ -19,8 +20,16 @@
 .t td.num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .t td.pending{color:var(--text-3);font-style:italic}
 .section-tag{display:inline-block;font-size:14px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);padding:3px 10px;border-radius:999px;margin-right:8px}
-.deck-header{top:0;left:0;right:0;margin:0;padding:18px 40px;background:rgb(54,114,94);color:#fff}
-.deck-header .eyebrow{color:#fff}
+.deck-header{top:0;left:0;right:0;margin:0;padding:18px 40px;background:rgb(54,114,94);color:#fff;overflow:hidden}
+.deck-header::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background-image:radial-gradient(rgba(255,255,255,.5) 1px, transparent 1.6px);
+  background-size:13px 13px;
+  -webkit-mask-image:radial-gradient(480px 200px at 84% 20%, black 0%, black 30%, transparent 72%);
+  mask-image:radial-gradient(480px 200px at 84% 20%, black 0%, black 30%, transparent 72%);
+  pointer-events:none;
+}
+.deck-header .eyebrow{color:#fff;position:relative;z-index:1}
 .hdr-logo{height:24px;width:24px;vertical-align:-6px;margin-right:8px;border-radius:5px;background:#fff}
 @media print{.deck-header{position:absolute!important;display:flex!important}}
 
@@ -96,6 +105,17 @@ table.sc tr.sec td{background:#e7efe8;font-weight:700}
 table.sc tr.total td{background:#d9a531;color:#3a2a10;font-weight:800}
 table.sc tr.sub2 td{background:#f4f7f4;font-style:italic;color:#3a5a4a}
 table.sc.sc-mini{margin-top:10px}
+
+/* Invisible edge nav zones — click left/right edge of the page to go prev/next, no visible arrow needed */
+.nav-zone{position:fixed;top:0;bottom:0;width:8vw;min-width:56px;max-width:120px;z-index:30;cursor:pointer;background:transparent}
+.nav-zone-prev{left:0}
+.nav-zone-next{right:0}
+.nav-zone::after{content:"";position:absolute;top:50%;width:14px;height:14px;border:0 solid var(--text-2);opacity:0;transition:opacity .2s var(--ease)}
+.nav-zone-prev::after{left:18px;border-left-width:3px;border-bottom-width:3px;transform:translateY(-50%) rotate(45deg)}
+.nav-zone-next::after{right:18px;border-right-width:3px;border-top-width:3px;transform:translateY(-50%) rotate(45deg)}
+.nav-zone:hover::after{opacity:.35}
+html[data-preview] .nav-zone{display:none}
+@media print{.nav-zone{display:none}}
 </style>
 </head>
 <body data-themes="minimal-white,corporate-clean,swiss-grid,arctic-cool,academic-paper" data-theme-base="assets/themes/">
@@ -397,9 +417,17 @@ table.sc.sc-mini{margin-top:10px}
   </section>
 
 </div>
+<div class="nav-zone nav-zone-prev" aria-label="สไลด์ก่อนหน้า" role="button" tabindex="-1"></div>
+<div class="nav-zone nav-zone-next" aria-label="สไลด์ถัดไป" role="button" tabindex="-1"></div>
 <script src="assets/runtime.js"></script>
 <script>
 addEventListener('DOMContentLoaded',()=>{
+  document.querySelector('.nav-zone-prev').addEventListener('click',()=>{
+    document.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowLeft'}));
+  });
+  document.querySelector('.nav-zone-next').addEventListener('click',()=>{
+    document.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight'}));
+  });
   const css=getComputedStyle(document.documentElement);
   const accent=css.getPropertyValue('--accent').trim();
   const text2=css.getPropertyValue('--text-2').trim();
