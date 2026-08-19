@@ -16,17 +16,20 @@
   --bg:#e9ebee;--bg-soft:#eef0f3;--hdr-h:104px;}
 h3,.h3,h4,.h4,.kicker,.eyebrow{font-family:var(--font-display)}
 .t{width:100%;border-collapse:collapse;font-size:16px}
-.t th,.t td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
+.t th,.t td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);line-height:1.25}
 .t th{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);font-weight:600}
 .t tr:hover td{background:var(--surface-2)}
 .t td.num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .t td.pending{color:var(--text-3);font-style:italic}
 .section-tag{display:inline-block;font-size:14px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);padding:3px 10px;border-radius:999px;margin-right:8px}
-table.mo{width:100%;border-collapse:collapse;font-size:12px}
-table.mo th,table.mo td{padding:4px 5px;text-align:center;border-bottom:1px solid var(--border);white-space:nowrap}
-table.mo th{color:var(--text-3);font-weight:600;font-size:11px}
+table.mo{width:100%;border-collapse:collapse;font-size:15px}
+table.mo th,table.mo td{padding:6px;text-align:center;border-bottom:1px solid var(--border);white-space:nowrap;line-height:1.2}
+table.mo th{color:var(--text-3);font-weight:600;font-size:14px}
 table.mo td:first-child,table.mo th:first-child{text-align:left}
 table.mo tr.hl td{color:var(--accent);font-weight:700}
+.sc-lg th,.sc-lg td{font-size:16px!important;padding:7px 8px!important;line-height:1.25!important}
+.slide-compact{padding-bottom:32px}
+.slide-narrow>.card{max-width:1400px;margin-left:auto;margin-right:auto}
 .deck-header{top:0;left:0;right:0;margin:0;padding:18px 40px;background:rgb(54,114,94);color:#fff;overflow:hidden}
 /* Content must never start above the header's bottom edge, regardless of header/logo size */
 .slide:not(.cover-hero):not(.mockup-hero){padding-top:var(--hdr-h)}
@@ -237,7 +240,7 @@ html[data-preview] .nav-zone{display:none}
   </section>
 
   <!-- 4. ข้อ 1-2 -->
-  <section class="slide" data-title="ข้อ 1-2 SME/ESG">
+  <section class="slide slide-compact slide-narrow" data-title="ข้อ 1-2 SME/ESG">
     <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">โครงการสนับสนุนสินเชื่อ ESG ทั้งอุตสาหกรรมสีเขียวและสีน้ำเงิน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 1-2</p>
     <div class="card mt-l" style="padding:4px 12px">
@@ -250,9 +253,9 @@ html[data-preview] .nav-zone{display:none}
       </tbody>
     </table>
     </div>
-    <div class="card mt-m" style="padding:10px 16px">
+    <div class="card" style="padding:10px 16px;margin-top:12px">
     <p class="eyebrow">รายละเอียดผลการดำเนินงานรายสาขา</p>
-    <table class="sc mt-s">
+    <table class="sc sc-lg mt-s">
       <thead>
         <tr>
           <th rowspan="2">สาขา</th>
@@ -275,7 +278,7 @@ html[data-preview] .nav-zone{display:none}
       </tbody>
     </table>
     </div>
-    <div class="card mt-m" style="padding:8px 16px">
+    <div class="card" style="padding:8px 16px;margin-top:12px">
     <p class="eyebrow">ผลการดำเนินงานรายบุคคล/แผน (เม.ย.–มี.ค.)</p>
     <table class="mo mt-s">
       <thead><tr><th></th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th><th>Jan</th><th>Feb</th><th>Mar</th></tr></thead>
