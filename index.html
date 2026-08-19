@@ -13,7 +13,7 @@
    Headings use a loopless (ไม่มีหัว) Thai font; body content uses Cordia New. */
 :root{--font-sans:'Cordia New','TH Sarabun New','Leelawadee UI','Noto Sans Thai','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
   --font-display:'Leelawadee UI','Noto Sans Thai','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
-  --bg:#e9ebee;--bg-soft:#eef0f3;}
+  --bg:#e9ebee;--bg-soft:#eef0f3;--hdr-h:104px;}
 h3,.h3,h4,.h4,.kicker,.eyebrow{font-family:var(--font-display)}
 .t{width:100%;border-collapse:collapse;font-size:16px}
 .t th,.t td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
@@ -23,6 +23,8 @@ h3,.h3,h4,.h4,.kicker,.eyebrow{font-family:var(--font-display)}
 .t td.pending{color:var(--text-3);font-style:italic}
 .section-tag{display:inline-block;font-size:14px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);padding:3px 10px;border-radius:999px;margin-right:8px}
 .deck-header{top:0;left:0;right:0;margin:0;padding:18px 40px;background:rgb(54,114,94);color:#fff;overflow:hidden}
+/* Content must never start above the header's bottom edge, regardless of header/logo size */
+.slide:not(.cover-hero):not(.mockup-hero){padding-top:var(--hdr-h)}
 .deck-header::before{
   content:"";position:absolute;inset:0;z-index:0;
   background-image:radial-gradient(rgba(255,255,255,.5) 1px, transparent 1.6px);
@@ -97,7 +99,7 @@ h3,.h3,h4,.h4,.kicker,.eyebrow{font-family:var(--font-display)}
 .mockup-hero .deck-header{display:none}
 
 /* Slide 3 — full scorecard, recreated close to the official ตอ. table */
-.scorecard-slide{padding:76px 28px 14px!important;overflow:hidden}
+.scorecard-slide{padding:var(--hdr-h) 28px 14px!important;overflow:hidden}
 .sc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 table.sc{width:100%;border-collapse:collapse;font-size:14px}
 table.sc td,table.sc th{padding:5px 6px;border-bottom:1px solid #e2e8e4;line-height:1.3}
