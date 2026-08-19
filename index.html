@@ -16,7 +16,8 @@
   --bg:#e9ebee;--bg-soft:#eef0f3;--hdr-h:104px;
   --radius:2px;--radius-sm:2px;--radius-lg:2px;}
 /* Bento grid system — sharp corners, no rounding, for a formal/credible bank look */
-.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(64px,auto);gap:14px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(64px,auto);grid-auto-flow:dense;gap:14px}
+.bento .tile-fill{height:100%;display:flex;flex-direction:column;justify-content:center}
 .bento>.card{border-radius:2px;margin:0}
 .b-3{grid-column:span 3}.b-4{grid-column:span 4}.b-5{grid-column:span 5}
 .b-6{grid-column:span 6}.b-7{grid-column:span 7}.b-8{grid-column:span 8}
@@ -262,10 +263,10 @@ html[data-preview] .nav-zone{display:none}
     <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">โครงการสนับสนุนสินเชื่อ ESG ทั้งอุตสาหกรรมสีเขียวและสีน้ำเงิน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 2</p>
     <div class="bento mt-l">
-      <div class="card b-5 tile-dark"><p class="eyebrow">เป้าหมาย</p><div style="font-size:44px;font-weight:800">509 <span style="font-size:20px;font-weight:600">ลบ.</span></div></div>
-      <div class="card b-3 tile-gold"><p class="eyebrow">น้ำหนักคะแนน</p><div style="font-size:44px;font-weight:800">6</div></div>
+      <div class="card b-4 b-tall tile-dark tile-fill"><p class="eyebrow">เป้าหมาย</p><div style="font-size:52px;font-weight:800">509 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">โครงการสนับสนุนสินเชื่อ ESG</p></div>
+      <div class="card b-4 tile-gold"><p class="eyebrow">น้ำหนักคะแนน</p><div style="font-size:44px;font-weight:800">6</div></div>
       <div class="card b-4"><p class="eyebrow">ผลงานจริง / คะแนนที่ได้</p><div style="font-size:22px;font-weight:700;color:var(--text-3)">รอข้อมูล</div></div>
-    <div class="card b-12" style="padding:10px 16px">
+    <div class="card b-8" style="padding:10px 16px">
     <p class="eyebrow">รายละเอียดผลการดำเนินงานรายสาขา</p>
     <table class="sc sc-lg mt-s">
       <thead>
