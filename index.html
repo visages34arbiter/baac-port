@@ -47,6 +47,11 @@ table.mo th{color:var(--text-3);font-weight:600;font-size:20px}
 table.mo td:first-child,table.mo th:first-child{text-align:left}
 table.mo tr.hl td{color:var(--accent);font-weight:700}
 .sc-lg th,.sc-lg td{font-size:20px!important;padding:5px 8px!important;line-height:1.15!important}
+tr.hl-row td{background:#fbe4e4!important;font-weight:700;box-shadow:inset 0 0 0 2px #c0392b}
+.prod-card{border:1px solid var(--border);padding:10px 14px;font-size:20px;line-height:1.25}
+.prod-card b.ptitle{font-size:22px;color:var(--accent)}
+.prod-card .pf{margin-top:4px}
+.prod-card .pf b.lbl{color:var(--text-3);font-weight:600}
 .slide-compact{padding-bottom:16px}
 .slide-narrow{justify-content:flex-start}
 .slide-narrow>.card,.slide-narrow>.bento{max-width:1400px;margin-left:auto;margin-right:auto}
@@ -261,171 +266,204 @@ html[data-preview] .nav-zone{display:none}
     <div class="notes">ตารางนี้คือค่าเป้าหมาย/น้ำหนักคะแนนตามคำรับรองฯ ตัวเต็ม — สไลด์ถัดไปจะแจกแจงทีละหมวดให้อ่านง่ายขึ้น พร้อมช่องผลงานจริงที่จะกรอกทีหลัง</div>
   </section>
 
-  <!-- 4. ข้อ 2 ESG -->
-  <section class="slide slide-compact slide-narrow" data-title="ข้อ 2 ESG">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">โครงการสนับสนุนสินเชื่อ ESG ทั้งอุตสาหกรรมสีเขียวและสีน้ำเงิน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+  <!-- 4. One Page KPIs -->
+  <section class="slide slide-narrow" data-title="ONE PAGE รายละเอียดตัวชี้วัด KPIs ฝสข.">
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ONE PAGE รายละเอียดตัวชี้วัด KPIs ฝสข.</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <p class="kicker">คำนิยาม/ขอบเขตการนับผลงานของตัวชี้วัด</p>
+    <div class="bento mt-m">
+      <div class="card b-4" style="padding:12px 16px">
+        <p class="eyebrow" style="color:var(--accent)">ด้านสินเชื่อ</p>
+        <p class="dim mt-s"><b>รับลูกค้าเกษตรกรรายใหม่</b> — ลูกค้าขึ้นทะเบียนเกษตรกรตามข้อบังคับ 603 เกษตรกรขึ้นทะเบียนใหม่ในบัญชี อนุมัติเงินกู้หรือไม่ก็ได้</p>
+        <p class="dim mt-s"><b>Normal Port</b> — Growth สินเชื่อ Normal Port ไม่รวมกลุ่ม Secure Port ไม่รวมโครงการข้าว</p>
+        <p class="dim mt-s"><b>สินเชื่อ ESG</b> — การจ่ายสินเชื่อสัญญาใหม่ในปีบัญชี (ไม่รับรวมสัญญา Revolving) มาตรการ ESG ทั้งที่เป็นมาตรการเดิมและมาตรการใหม่ในปีบัญชี ไม่รวมลูกค้า ธญ.</p>
+        <p class="dim mt-s"><b>สินเชื่อจ่ายใหม่ (รายไตรมาส)</b> — ผลการดำเนินงานรับและจ่ายสินเชื่อรายไตรมาส (รวม Secure Port ไม่รวมลูกค้าสังกัด ธญ.) ไม่รวมโครงการข้าว</p>
+        <p class="dim mt-s"><b>Secure Port</b> — Growth สินเชื่อเฉพาะ Secure Port ทั้งสินเชื่อตามโครงการเดิมและโครงการใหม่ในปีบัญชี</p>
+      </div>
+      <div class="card b-4" style="padding:12px 16px">
+        <p class="eyebrow" style="color:var(--accent)">ด้านรายได้ดอกเบี้ย</p>
+        <p class="dim mt-s"><b>รับชำระสัญญาดอกเบี้ยค้าง 15 เดือนเป็นเงินสด</b> — ผลการดำเนินงานการรับชำระสัญญา 15 เดือน เป็นเงินสด ไม่รวมลูกค้าสังกัด ธญ. และ บน. ไม่นับผลงานกรณีใช้เครื่องมือจัดการหนี้ที่ไม่มีสัญญารวมดอกเบี้ย</p>
+        <p class="dim mt-s"><b>สัดส่วน AA ถัวเฉลี่ยรายไตรมาส</b> — โดยนับลูกค้าทั้งหมด (ฝสข./ธญ./บน.)</p>
+        <p class="dim mt-s"><b>Due สำรอง 1% ณ สิ้นเดือนที่ 2</b> — อัตรารับชำระหนี้ถึงกำหนดชำระสัญญาสำรอง 1% รวมลูกค้ากู้ Good Bank โดยนับรวมเมื่อหนี้ถึงกำหนดยังคงเป็นสำรอง 1%</p>
+        <p class="dim mt-s"><b>รับชำระ NA เป็นเงินสด</b> — ไม่รวมลูกค้าสังกัด บน. ไม่นับผลงานกรณีสัญญาที่ปรับฐานรับรู้รายได้เป็น AA</p>
+      </div>
+      <div class="card b-4" style="padding:12px 16px">
+        <p class="eyebrow" style="color:var(--accent)">ด้านบริหารจัดการหนี้</p>
+        <p class="dim mt-s"><b>Net NPLs</b> — ควบคุม NPLs ไม่ให้เกินเป้าหมาย เฉพาะ Good Bank</p>
+        <p class="dim mt-s"><b>Due รวม สิ้นเดือนที่ 3</b> — วัดผลการดำเนินงานตั้งแต่ไตรมาสที่ 4 ปี 2568 ถึงสิ้นปี 2569 รวมลูกค้า Good Bank</p>
+        <p class="eyebrow mt-m" style="color:var(--accent)">ด้านพัฒนา</p>
+        <p class="dim mt-s"><b>SME เกษตรหัวขบวนใหม่</b> · <b>นวัตกรรม</b></p>
+      </div>
+      <div class="card b-6" style="padding:12px 16px">
+        <p class="eyebrow" style="color:var(--accent)">ด้านเงินฝาก</p>
+        <p class="dim mt-s"><b>เงินรับฝากเพิ่ม (Deposit Growth)</b> — Growth เงินฝากไม่รวมเงินฝากอัตราดอกเบี้ยพิเศษ (Hot Money) โดย บง. ซึ่งปัจจุบันมีเฉพาะ สนจ.นนทบุรี และ สนจ.กรุงเทพฯ</p>
+      </div>
+      <div class="card b-6" style="padding:12px 16px">
+        <p class="eyebrow" style="color:var(--accent)">ด้านรายได้ค่าธรรมเนียมและสงเคราะห์ชีวิต</p>
+        <p class="dim mt-s">FBI หมวด 1-5 (รายได้ FBI จากบัตร ATM/Debt ให้ลดสัดส่วนเพิ่มขึ้น 60% เป็น 100% เพิ่มเฉพาะผลงาน KPIs ไม่มีผลต่อ BMIS)</p>
+        <p class="dim mt-s">เงินฝากสงเคราะห์ชีวิตรับประกัน-ต่อ x อัตรา KPIs รายได้เงินสงเคราะห์ชีวิตรับล่าสุด (เพื่อการประเมิน FBI)</p>
+      </div>
+    </div>
+    <div class="deck-footer"><span class="dim2">One Page KPIs</span><span class="slide-number"></span></div>
+    <div class="notes">คำนิยาม/ขอบเขตการนับผลงานของแต่ละตัวชี้วัด ตามเอกสาร ONE PAGE รายละเอียดตัวชี้วัด KPIs ฝสข.</div>
+  </section>
+
+  <!-- 5. ข้อ 2 ESG - ผลการดำเนินงาน -->
+  <section class="slide slide-compact slide-narrow" data-title="ข้อ 2 ESG - ผลการดำเนินงาน">
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ตัวชี้วัดที่ 2 โครงการสนับสนุน ESG สีเขียว/สีน้ำเงิน (IRDP) · คะแนน 6</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 2</p>
     <div class="bento mt-l">
-      <div class="card b-4 b-tall tile-dark tile-fill"><p class="eyebrow">เป้าหมาย</p><div style="font-size:52px;font-weight:800">509 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">โครงการสนับสนุนสินเชื่อ ESG</p></div>
-      <div class="card b-4 tile-gold"><p class="eyebrow">น้ำหนักคะแนน</p><div style="font-size:44px;font-weight:800">6</div></div>
-      <div class="card b-4"><p class="eyebrow">ผลงานจริง / คะแนนที่ได้</p><div style="font-size:22px;font-weight:700;color:var(--text-3)">รอข้อมูล</div></div>
-    <div class="card b-8" style="padding:10px 16px">
-    <p class="eyebrow">รายละเอียดผลการดำเนินงานรายสาขา</p>
-    <table class="sc sc-lg mt-s">
-      <thead>
-        <tr>
-          <th rowspan="2">สาขา</th>
-          <th rowspan="2" class="c">เป้าหมาย<br>ปีบัญชี 2569<br>(ลบ.)</th>
-          <th colspan="3" class="c" style="background:#5b7083">ผลการดำเนินงาน</th>
-        </tr>
-        <tr>
-          <th class="c" style="background:#f0b877;color:#3a2a10">ผลงาน<br>(ล้านบาท)</th>
-          <th class="c" style="background:#f0b877;color:#3a2a10">ร้อยละ</th>
-          <th class="c" style="background:#f0b877;color:#3a2a10">ต้องดำเนินการอีก<br>(ล้านบาท)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>สาขาบางบ่อ</td><td class="c">4.50</td><td class="c">3.10</td><td class="c">68.89%</td><td class="c">1.40</td></tr>
-        <tr><td>สาขาบางพลี</td><td class="c">4.90</td><td class="c">1.70</td><td class="c">34.69%</td><td class="c">3.20</td></tr>
-        <tr><td>สาขาพระสมุทรเจดีย์</td><td class="c">4.90</td><td class="c">0.65</td><td class="c">13.27%</td><td class="c">4.25</td></tr>
-        <tr><td>สาขาสมุทรปราการ</td><td class="c">4.00</td><td class="c">0.30</td><td class="c">7.50%</td><td class="c">3.70</td></tr>
-        <tr><td>สาขาบางเสาธง</td><td class="c">4.80</td><td class="c" style="color:#c0392b;font-weight:700">0.00</td><td class="c" style="color:#c0392b;font-weight:700">0.00%</td><td class="c">4.80</td></tr>
-        <tr class="total"><td>รวม</td><td class="c">23.10</td><td class="c">5.75</td><td class="c">24.89%</td><td class="c">17.35</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <div class="card b-12" style="padding:8px 16px">
-    <p class="eyebrow">ผลการดำเนินงานรายบุคคล/แผน (เม.ย.–มี.ค.)</p>
-    <table class="mo mt-s">
-      <thead><tr><th></th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th><th>Jan</th><th>Feb</th><th>Mar</th></tr></thead>
-      <tbody>
-        <tr><td>เจ้าหน้าที่ 1</td><td>–</td><td>0.0</td><td>0.0</td><td>0.0</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr><td>เจ้าหน้าที่ 2</td><td>–</td><td>0.2</td><td>0.2</td><td>0.3</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr><td>OSM</td><td>–</td><td>0.0</td><td>0.0</td><td>0.0</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr class="hl"><td>SUM</td><td>–</td><td>0.2</td><td>0.2</td><td>0.3</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr><td>76007</td><td>–</td><td>0.0</td><td>0.0</td><td>0.0</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr class="hl"><td>BRANCH</td><td>–</td><td>0.2</td><td>0.2</td><td>0.3</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr><td>AC.PLAN</td><td>–</td><td>–</td><td>–</td><td>0.5</td><td>1.0</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>–</td><td>–</td><td>–</td></tr>
-        <tr><td>FORECAST</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
-      </tbody>
-    </table>
-    </div>
-    </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 2</span><span class="slide-number" data-current="4" data-total="15"></span></div>
-    <div class="notes">ความคืบหน้าโครงการสนับสนุนสินเชื่อ ESG อุตสาหกรรมสีเขียวและสีน้ำเงิน</div>
-  </section>
-
-  <!-- 5. ข้อ 3-4 -->
-  <section class="slide slide-narrow" data-title="ข้อ 3-4 ลูกค้าใหม่/Port Growth">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ลูกค้าสินเชื่อรายใหม่ &amp; การเติบโตสินเชื่อ Port</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 3-4</p>
-    <div class="bento mt-l">
-      <div class="card b-4 b-tall tile-dark tile-fill"><p class="eyebrow">ข้อ 3 · รับลูกค้าสินเชื่อรายใหม่ (เกษตรกร 603) IRDP</p><div style="font-size:44px;font-weight:800">7,009 <span style="font-size:20px;font-weight:600">ราย</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
-      <div class="card b-8 tile-gold"><p class="eyebrow">ข้อ 4.1 · Normal Port</p><div style="font-size:36px;font-weight:800">265 <span style="font-size:20px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>4</b></p></div>
-      <div class="card b-8"><p class="eyebrow">ข้อ 4.2 · Secure Port IRDP</p><div style="font-size:36px;font-weight:800">1,000 <span style="font-size:20px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>7</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
-    </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 3-4</span><span class="slide-number" data-current="5" data-total="15"></span></div>
-    <div class="notes">เน้นว่าการเติบโต Port แยกเป็น Normal และ Secure คนละน้ำหนักคะแนน</div>
-  </section>
-
-  <!-- 6. ข้อ 5 -->
-  <section class="slide slide-narrow" data-title="ข้อ 5 จ่ายสินเชื่อรายไตรมาส">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">การจ่ายสินเชื่อในปีบัญชี 2569 (รายไตรมาส)</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 5 (NEW)</p>
-    <p class="dim">มากกว่าวันชำระหนี้ในแต่ละไตรมาส — เป้าหมาย มากกว่าร้อยละ 3 ทุกไตรมาส</p>
-    <div class="bento mt-l">
-      <div class="card b-4 b-tall tile-dark tile-fill"><p class="eyebrow">ไตรมาสที่ 1 - 2</p><div style="font-size:40px;font-weight:800">มากกว่า <span style="font-size:20px;font-weight:600">ร้อยละ 3</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>1.8</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
-      <div class="card b-8 tile-gold"><p class="eyebrow">ไตรมาสที่ 3</p><div style="font-size:36px;font-weight:800">มากกว่า <span style="font-size:20px;font-weight:600">ร้อยละ 3</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>0.75</b></p></div>
-      <div class="card b-8"><p class="eyebrow">ไตรมาสที่ 4</p><div style="font-size:36px;font-weight:800">มากกว่า <span style="font-size:20px;font-weight:600">ร้อยละ 3</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>0.45</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
-    </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 5</span><span class="slide-number" data-current="6" data-total="15"></span></div>
-    <div class="notes">ตัวชี้วัดใหม่ (NEW) ปีนี้ — น้ำหนักคะแนนลดลงตามไตรมาสที่ผ่านไป เน้นจ่ายสินเชื่อให้ทันช่วงต้นปี</div>
-  </section>
-
-  <!-- 7. ข้อ 6.1 -->
-  <section class="slide slide-narrow" data-title="ข้อ 6.1 อัตรารับชำระหนี้ สิ้นเดือน 2">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">อัตรารับชำระหนี้ (สำรอง 1%) ณ สิ้นเดือนที่ 2</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 6.1</p>
-    <div class="bento mt-l">
-      <div class="card b-3 tile-dark">
-        <p class="eyebrow">เป้าหมาย</p>
-        <div style="font-size:40px;font-weight:800">95<span style="font-size:20px;font-weight:600">%</span></div>
-        <p class="dim mt-s" style="font-size:20px">ทุกงวดเดือน · สำรอง 1%</p>
-        <p class="dim mt-s" style="font-size:20px">น้ำหนักคะแนน <b>0.9–1.15</b> ต่องวด</p>
+      <div class="card b-4 tile-dark"><p class="eyebrow">เป้าหมาย</p><div style="font-size:40px;font-weight:800">509 <span style="font-size:18px;font-weight:600">ลบ.</span></div></div>
+      <div class="card b-4 tile-gold"><p class="eyebrow">ผลงาน (ณ 13.08.2569)</p><div style="font-size:34px;font-weight:800">174.15 <span style="font-size:16px;font-weight:600">ลบ.</span></div></div>
+      <div class="card b-4"><p class="eyebrow">คาดการณ์ ธ.ค. 2569</p><div style="font-size:34px;font-weight:800">553.20 <span style="font-size:16px;font-weight:600">ลบ.</span></div></div>
+      <div class="card b-7" style="padding:8px 14px">
+      <p class="eyebrow">ผลการดำเนินงานรายจังหวัด (สนจ.) ภาคตะวันออก</p>
+      <table class="sc sc-lg mt-s">
+        <thead><tr><th>สนจ.</th><th class="c">เป้าหมาย (ลบ.)</th><th class="c">ผลงาน</th><th class="c">ร้อยละ</th><th class="c">อีก (ลบ.)</th></tr></thead>
+        <tbody>
+          <tr><td>ระยอง</td><td class="c">64.00</td><td class="c">44.63</td><td class="c">69.73%</td><td class="c">19.37</td></tr>
+          <tr><td>สระแก้ว</td><td class="c">44.00</td><td class="c">30.60</td><td class="c">69.54%</td><td class="c">13.40</td></tr>
+          <tr><td>ปราจีนบุรี</td><td class="c">36.00</td><td class="c">14.71</td><td class="c">40.86%</td><td class="c">21.29</td></tr>
+          <tr><td>จันทบุรี</td><td class="c">81.00</td><td class="c">27.76</td><td class="c">34.28%</td><td class="c">53.24</td></tr>
+          <tr><td>ฉะเชิงเทรา</td><td class="c">88.00</td><td class="c">26.52</td><td class="c">30.14%</td><td class="c">61.48</td></tr>
+          <tr><td>ชลบุรี</td><td class="c">75.00</td><td class="c">20.96</td><td class="c">27.95%</td><td class="c">54.04</td></tr>
+          <tr class="hl-row"><td>สมุทรปราการ</td><td class="c">23.00</td><td class="c">5.75</td><td class="c">25.00%</td><td class="c">17.25</td></tr>
+          <tr><td>นครนายก</td><td class="c">24.00</td><td class="c">2.92</td><td class="c">12.15%</td><td class="c">21.09</td></tr>
+          <tr><td>ตราด</td><td class="c">75.00</td><td class="c">0.30</td><td class="c">0.40%</td><td class="c">74.70</td></tr>
+          <tr class="total"><td>ตอ.</td><td class="c">509.00</td><td class="c">174.15</td><td class="c">34.21%</td><td class="c">334.85</td></tr>
+        </tbody>
+      </table>
       </div>
-      <div class="card b-9" style="height:400px;padding:24px"><canvas id="chart61"></canvas></div>
-    </div>
-    <p class="dim2 mt-s" style="font-size:20px">* เป้าหมายร้อยละ 95 ทุกงวดเดือน — เส้นผลงานจริงจะเพิ่มหลังปิดแต่ละงวด</p>
-    <div class="deck-footer"><span class="dim2">ข้อ 6.1</span><span class="slide-number" data-current="7" data-total="15"></span></div>
-    <div class="notes">อธิบายว่า "สิ้นเดือนที่ 2" หมายถึงหนี้ถึงกำหนดชำระเดือนใด แล้วนับไปอีก 2 เดือนคือวันตรวจสอบ</div>
-  </section>
-
-  <!-- 8. ข้อ 6.2 -->
-  <section class="slide slide-narrow" data-title="ข้อ 6.2 อัตรารับชำระหนี้ สิ้นเดือน 3">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">อัตรารับชำระหนี้ ณ สิ้นเดือนที่ 3</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 6.2 (IRDP)</p>
-    <div class="bento mt-l">
-      <div class="card b-3 tile-dark">
-        <p class="eyebrow">เป้าหมาย</p>
-        <div style="font-size:28px;font-weight:800">98.5<span style="font-size:20px;font-weight:600">% → </span>90.0<span style="font-size:20px;font-weight:600">%</span></div>
-        <p class="dim mt-s" style="font-size:20px">ลดหลั่นในงวดท้ายปี</p>
-        <p class="dim mt-s" style="font-size:20px">น้ำหนักคะแนน <b>0.6–0.8</b> ต่องวด</p>
+      <div class="card b-5" style="padding:8px 14px">
+      <p class="eyebrow">รายละเอียดรายสาขา สนจ.สมุทรปราการ</p>
+      <table class="sc sc-lg mt-s">
+        <thead><tr><th>สาขา</th><th class="c">เป้าหมาย</th><th class="c">ผลงาน</th><th class="c">ร้อยละ</th><th class="c">อีก</th></tr></thead>
+        <tbody>
+          <tr><td>บางบ่อ</td><td class="c">4.50</td><td class="c">3.10</td><td class="c">68.89%</td><td class="c">1.40</td></tr>
+          <tr><td>บางพลี</td><td class="c">4.90</td><td class="c">1.70</td><td class="c">34.69%</td><td class="c">3.20</td></tr>
+          <tr><td>พระสมุทรเจดีย์</td><td class="c">4.90</td><td class="c">0.65</td><td class="c">13.27%</td><td class="c">4.25</td></tr>
+          <tr><td>สมุทรปราการ</td><td class="c">4.00</td><td class="c">0.30</td><td class="c">7.50%</td><td class="c">3.70</td></tr>
+          <tr><td>บางเสาธง</td><td class="c">4.80</td><td class="c" style="color:#c0392b">0.00</td><td class="c" style="color:#c0392b">0.00%</td><td class="c">4.80</td></tr>
+          <tr class="total"><td>รวม</td><td class="c">23.10</td><td class="c">5.75</td><td class="c">24.89%</td><td class="c">17.35</td></tr>
+        </tbody>
+      </table>
       </div>
-      <div class="card b-9" style="height:400px;padding:24px"><canvas id="chart62"></canvas></div>
     </div>
-    <p class="dim2 mt-s" style="font-size:20px">* เป้าหมายลดหลั่นจากร้อยละ 98.5 → 95.0 → 92.0 → 90.0 ในงวดท้ายปี — เส้นผลงานจริงจะเพิ่มหลังปิดแต่ละงวด</p>
-    <div class="deck-footer"><span class="dim2">ข้อ 6.2</span><span class="slide-number" data-current="8" data-total="15"></span></div>
-    <div class="notes">เน้นงวดท้ายปี (ม.ค.-มี.ค. 2570) ที่เป้าหมายลดลง เพราะเป็นหนี้ใกล้ปิดปีบัญชีที่ตรวจสอบเข้มขึ้น</div>
+    <div class="deck-footer"><span class="dim2">ข้อ 2 ESG</span><span class="slide-number"></span></div>
+    <div class="notes">ที่มา MIS: โครงการ &gt; รายงานจ่ายเงินกู้ - รับชำระหนี้ สนับสนุนสินเชื่อที่เป็นมิตรกับสิ่งแวดล้อมตามหลักความยั่งยืน (ESG) เลือกสังกัดลูกค้าสาขา</div>
   </section>
 
-  <!-- 9. ข้อ 7-8 -->
-  <section class="slide slide-narrow" data-title="ข้อ 7-8 รับชำระต้น/ดอกเบี้ยค้าง">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">รับชำระต้นเงิน &amp; ดอกเบี้ยค้างชำระ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 7-8</p>
-    <div class="bento mt-l anim-stagger-list" data-anim-target>
-      <div class="card b-7 tile-dark"><p class="eyebrow">ข้อ 7 · รับชำระต้นเงิน+ดอกเบี้ยค้าง (AA) NEW</p><h3 class="mt-s" style="color:#fff">เพิ่มขึ้นร้อยละ 0.75<br><span class="dim">(ต้นเงินรับรู้รายได้เดิม 67.82%)</span></h3><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
-      <div class="card b-5 tile-gold"><p class="eyebrow">ข้อ 8 · รับชำระดอกเบี้ยค้างรับ ไม่รับรู้รายได้เกณฑ์เงินสด (NA)</p><div style="font-size:44px;font-weight:800">514 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>8</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
+  <!-- 6. ข้อ 2 ESG - คาดการณ์สะสมรายเดือน -->
+  <section class="slide slide-compact slide-narrow" data-title="ข้อ 2 ESG - คาดการณ์สะสมรายเดือน">
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ตัวชี้วัดที่ 2 ESG · คาดการณ์เติบโตสะสมรายเดือน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <p class="kicker">หมวดที่ 1 · ข้อ 2</p>
+    <div class="bento mt-l">
+      <div class="card b-12" style="padding:10px 16px">
+      <p class="eyebrow">คาดการณ์เติบโต ESG สะสมรายเดือน (ส.ค.–ธ.ค. 2569)</p>
+      <table class="sc sc-lg mt-s">
+        <thead><tr><th>สนจ.</th><th class="c">เป้าหมาย (ลบ.)</th><th class="c">ส.ค.-69</th><th class="c">ก.ย.-69</th><th class="c">ต.ค.-69</th><th class="c">พ.ย.-69</th><th class="c">ธ.ค.-69</th></tr></thead>
+        <tbody>
+          <tr><td>ปราจีนบุรี</td><td class="c">36.00</td><td class="c">19.69</td><td class="c">31.69</td><td class="c">36.89</td><td class="c">41.09</td><td class="c">45.22</td></tr>
+          <tr><td>ระยอง</td><td class="c">64.00</td><td class="c">50.50</td><td class="c">56.06</td><td class="c">58.76</td><td class="c">61.76</td><td class="c">69.28</td></tr>
+          <tr><td>ฉะเชิงเทรา</td><td class="c">88.00</td><td class="c">25.24</td><td class="c">43.99</td><td class="c">56.59</td><td class="c">63.84</td><td class="c">88.94</td></tr>
+          <tr><td>นครนายก</td><td class="c">24.00</td><td class="c">10.05</td><td class="c">12.75</td><td class="c">16.95</td><td class="c">21.00</td><td class="c">24.80</td></tr>
+          <tr><td>จันทบุรี</td><td class="c">81.00</td><td class="c">30.95</td><td class="c">40.95</td><td class="c">54.70</td><td class="c">65.56</td><td class="c">83.51</td></tr>
+          <tr><td>ชลบุรี</td><td class="c">75.00</td><td class="c">35.70</td><td class="c">51.75</td><td class="c">60.04</td><td class="c">70.81</td><td class="c">82.79</td></tr>
+          <tr><td>สระแก้ว</td><td class="c">44.00</td><td class="c">28.66</td><td class="c">39.45</td><td class="c">42.71</td><td class="c">45.84</td><td class="c">49.56</td></tr>
+          <tr><td>ตราด</td><td class="c">75.00</td><td class="c">11.00</td><td class="c">29.50</td><td class="c">56.00</td><td class="c">72.50</td><td class="c">86.00</td></tr>
+          <tr class="hl-row"><td>สมุทรปราการ</td><td class="c">23.00</td><td class="c">8.50</td><td class="c">11.50</td><td class="c">15.50</td><td class="c">19.30</td><td class="c">23.10</td></tr>
+          <tr class="total"><td>ตอ.</td><td class="c">509.00</td><td class="c">220.29</td><td class="c">317.64</td><td class="c">398.14</td><td class="c">461.70</td><td class="c">553.20</td></tr>
+        </tbody>
+      </table>
+      </div>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 7-8</span><span class="slide-number" data-current="9" data-total="15"></span></div>
-    <div class="notes">AA คือหนี้ที่รับรู้รายได้แล้ว NA คือดอกเบี้ยค้างที่ยังไม่รับรู้รายได้ (เกณฑ์เงินสด)</div>
+    <div class="deck-footer"><span class="dim2">ข้อ 2 ESG</span><span class="slide-number"></span></div>
+    <div class="notes">ค่าคาดการณ์สะสมรายเดือน (ส.ค.-ธ.ค. 2569) สำหรับตัวชี้วัด ESG แยกรายจังหวัด</div>
   </section>
 
-  <!-- 10. ข้อ 9-10 -->
-  <section class="slide slide-narrow" data-title="ข้อ 9-10 Net NPLs/เงินฝากเพิ่ม">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">คุณภาพหนี้ &amp; การเติบโตเงินฝาก</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 9-10</p>
-    <div class="bento mt-l anim-stagger-list" data-anim-target>
-      <div class="card b-5 tile-gold"><p class="eyebrow">ข้อ 9 · Net NPLs IRDP</p><div style="font-size:40px;font-weight:800">ไม่เกิน 1,928 <span style="font-size:20px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
-      <div class="card b-7 tile-dark"><p class="eyebrow">ข้อ 10 · เงินรับฝากเพิ่ม (Deposit Growth)</p><div style="font-size:44px;font-weight:800">3,023 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
+  <!-- 7. ข้อ 2 ESG - ผลิตภัณฑ์ 1-6 -->
+  <section class="slide slide-narrow" data-title="ข้อ 2 ESG - ผลิตภัณฑ์สินเชื่อ (1/2)">
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">โครงการสนับสนุนสินเชื่อ ESG ภายใต้ตัวชี้วัดปีบัญชี 2569 (1/2)</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <p class="kicker">หมวดที่ 1 · ข้อ 2 · ผลิตภัณฑ์ 1-6</p>
+    <div class="bento mt-m">
+      <div class="card prod-card b-6"><b class="ptitle">1. ไทยยั่งยืน (ชุมชนสร้างไทย ชุดที่ 3)</b> <span class="dim">ถึง 31 ก.ค. 2571</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> ผู้ประกอบการภาคเกษตร อุตสาหกรรม พาณิชยกรรม มิติบุคคล และสหกรณ์การเกษตร</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> เงินทุนหมุนเวียนและเงินลงทุนเพื่อธุรกิจยั่งยืน</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> สูงสุด 100 ล้านบาท/ราย · <b class="lbl">ดอกเบี้ย:</b> 0.01% ต่อปี ใน 3 ปีแรก จากนั้น MRR/MLR</div>
+        <div class="pf"><b class="lbl">ระยะเวลาชำระ:</b> หมุนเวียนไม่เกิน 3 ปี ลงทุนไม่เกิน 15 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">2. สินเชื่อเสริมแกร่ง SME เกษตร (ระยะที่ 2)</b> <span class="dim">ถึง 31 มี.ค. 2570</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> ผู้ประกอบการเกษตร บุคคล นิติบุคคล และสหกรณ์การเกษตร</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> เสริมสภาพคล่อง ขยายธุรกิจ เชื่อมโยง Supply Chain สินค้าเกษตร และส่งเสริมใช้เทคโนโลยี/AI</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> ขั้นต่ำ 3 แสนบาท สูงสุด 100 ล้านบาท/ราย (บุคคลธรรมดาสูงสุด 50 ล้านบาท)</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> ปีที่ 1-2 MRR/MLR -0.50% จากนั้นปกติ · <b class="lbl">ชำระ:</b> หมุนเวียนไม่เกิน 10 ปี ลงทุนไม่เกิน 15 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">3. SME ไทยใโย (SME Logo)</b> <span class="dim">ถึง 31 ก.พ. 2571</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> ผู้ประกอบการ SME ภาคเกษตร อุตสาหกรรม พาณิชยกรรม และบริการ</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> เสริมสภาพคล่อง ลงทุน และ Refinance</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> ตามหลักเกณฑ์และความสามารถในการชำระหนี้ · <b class="lbl">ดอกเบี้ย:</b> 2.00% ต่อปีใน 3 ปีแรก</div>
+        <div class="pf"><b class="lbl">ระยะเวลาชำระ:</b> หมุนเวียนไม่เกิน 3 ปี ลงทุนไม่เกิน 15 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">4. Contract Farming (ระยะที่ 2)</b> <span class="dim">ถึง 31 มี.ค. 2571</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกรคู่สัญญาและผู้ประกอบธุรกิจเกษตรที่มี MOU กับ ธ.ก.ส.</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> ทุนหมุนเวียน ลงทุน และ Refinance ระยะยาวเกษตรพันธสัญญา</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> เกษตรกร MRR-1.50% / ผู้ประกอบธุรกิจ MLR-1.00%</div>
+        <div class="pf"><b class="lbl">ระยะเวลาชำระ:</b> หมุนเวียนไม่เกิน 18 เดือน ลงทุนไม่เกิน 15 ปี Refinance ไม่เกิน 12 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">5. Bio Economy Credit</b> <span class="dim">ถึง 31 มี.ค. 2573</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกร บุคคล วิสาหกิจชุมชน ผู้ประกอบธุรกิจชีวภาพ</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> สนับสนุนนวัตกรรมที่ใช้ทรัพยากรชีวภาพ เทคโนโลยี Bio-Based และเสริมสภาพคล่อง</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> มาตรฐาน MRR-1.25% / MLR-1.50% (เกณฑ์เร่งรัดสูงสุด 95% ของแผนลงทุน)</div>
+        <div class="pf"><b class="lbl">ระยะเวลาชำระ:</b> หมุนเวียน 12-18 เดือน ลงทุน/Refinance ไม่เกิน 15 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">6. Green Credit</b> <span class="dim">ถึง 31 มี.ค. 2573</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกร บุคคล วิสาหกิจชุมชน ผู้ประกอบการ</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> ส่งเสริมเกษตรอินทรีย์ ลดผลกระทบสิ่งแวดล้อม ลดฝุ่น PM2.5</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> มาตรฐาน MRR-1.25% / MLR-1.50%</div>
+        <div class="pf"><b class="lbl">ระยะเวลาชำระ:</b> หมุนเวียน 12-18 เดือน ลงทุนไม่เกิน 15 ปี</div>
+      </div>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 9-10</span><span class="slide-number" data-current="10" data-total="15"></span></div>
-    <div class="notes">Net NPLs ยิ่งต่ำยิ่งดี (เป้าหมายคือเพดานสูงสุดที่ยอมรับได้) ต่างจากตัวชี้วัดอื่นที่ยิ่งสูงยิ่งดี</div>
+    <div class="deck-footer"><span class="dim2">ข้อ 2 ESG</span><span class="slide-number"></span></div>
+    <div class="notes">โครงการสนับสนุนสินเชื่อ ESG ภายใต้ตัวชี้วัดปีบัญชี 2569 — ผลิตภัณฑ์ 1-6 จากทั้งหมด 12 ผลิตภัณฑ์</div>
   </section>
 
-  <!-- 11. ข้อ 11-12 -->
-  <section class="slide slide-narrow" data-title="ข้อ 11-12 ค่าธรรมเนียม/หนี้ค้าง 15 เดือน">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">รายได้ค่าธรรมเนียม &amp; การรับชำระหนี้ค้างนาน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <p class="kicker">หมวดที่ 1 · ข้อ 11-12</p>
-    <div class="bento mt-l anim-stagger-list" data-anim-target>
-      <div class="card b-7 tile-dark"><p class="eyebrow">ข้อ 11 · รายได้ค่าธรรมเนียม + เงินฝากสงเคราะห์ชีวิต*</p><div style="font-size:44px;font-weight:800">320 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>6</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
-      <div class="card b-5 tile-gold"><p class="eyebrow">ข้อ 12 · อัตรารับชำระสัญญาหนี้ค้างเกิน 15 เดือน ไปเงินสด*</p><div style="font-size:44px;font-weight:800"><span class="counter" data-to="70">0</span>%</div><p class="dim mt-s">น้ำหนักคะแนน <b>8</b> · ผลงานจริง: <i>รอข้อมูล</i></p></div>
+  <!-- 8. ข้อ 2 ESG - ผลิตภัณฑ์ 7-12 -->
+  <section class="slide slide-narrow" data-title="ข้อ 2 ESG - ผลิตภัณฑ์สินเชื่อ (2/2)">
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">โครงการสนับสนุนสินเชื่อ ESG ภายใต้ตัวชี้วัดปีบัญชี 2569 (2/2)</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <p class="kicker">หมวดที่ 1 · ข้อ 2 · ผลิตภัณฑ์ 7-12</p>
+    <div class="bento mt-m">
+      <div class="card prod-card b-6"><b class="ptitle">7. Circular Economy Credit</b> <span class="dim">ถึง 31 มี.ค. 2573</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกร บุคคล วิสาหกิจชุมชน ผู้ประกอบธุรกิจหมุนเวียน</div>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> สนับสนุน Reuse, Recycle, Upcycle ลดของเสียและเพิ่มมูลค่าวัสดุเหลือใช้</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> มาตรฐาน MRR-1.25% / MLR-1.50% · <b class="lbl">ชำระ:</b> หมุนเวียน 12-18 เดือน ลงทุนไม่เกิน 15 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">8. สินเชื่อพัฒนาแหล่งน้ำเพื่อการเกษตร</b> <span class="dim">ถึง 31 มี.ค. 2573</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกรตามระเบียบ ฉบับที่ 44 ที่มีความประสงค์พัฒนาแหล่งน้ำในไร่นานอกเขตชลประทาน</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> สูงสุด 500,000 บาท/ราย และไม่เกิน 80% ของราคาประเมิน</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> MRR -1% · <b class="lbl">ระยะเวลาชำระ:</b> ไม่เกิน 10 ปี อายุผู้กู้รวมสัญญาไม่เกิน 85 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">9. สินเชื่อเพื่อเทคโนโลยีและเครื่องจักรการเกษตร (Smart Tech)</b> <span class="dim">ถึง 31 มี.ค. 2573</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกรที่นำเทคโนโลยี Smart Farming, AgriTech, โรงเรือนอัจฉริยะมาใช้</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> ไม่เกิน 85% ของราคาลงทุน ผู้สมทบอย่างน้อย 5%</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> MRR -1% · <b class="lbl">ระยะเวลาชำระ:</b> ลงทุน/Refinance ไม่เกิน 10 ปี และอายุผู้กู้รวมสัญญาไม่เกิน 70 ปี</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">10. สินเชื่อรักษ์ป่าไม้ยั่งยืน</b> <span class="dim">ถึง 31 มี.ค. 2573</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกร วิสาหกิจชุมชน มิติบุคคล และสหกรณ์การเกษตร</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> ลงทุนไม่เกิน 80% ของราคาลงทุน ผู้สมทบอย่างน้อย 20%</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> MRR -1% ปีที่ 1-3 จากนั้น MRR-1.50%/MLR-1.50% · <b class="lbl">ชำระ:</b> ไม่เกิน 15 ปี (กรณีปลูกไม้ยืนต้นไม่เกิน 20 ปี)</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">11. สินเชื่อเสริมสภาพคล่องระยะสั้นเกษตรกรชาวไร่อ้อยลด PM2.5 (BCG Model)</b> <span class="dim">ถึง 31 มี.ค. 2570</span>
+        <div class="pf"><b class="lbl">กลุ่มเป้าหมาย:</b> เกษตรกรชาวไร่อ้อยที่ตัดอ้อยสดเพื่อลดการเผาและลดฝุ่น PM2.5</div>
+        <div class="pf"><b class="lbl">ดอกเบี้ย:</b> อัตราชดเชยส่วนต่างดอกเบี้ยรัฐบาลจ่ายชดเชยแทนเกษตรกรผ่านหลักเกณฑ์โครงการ</div>
+        <div class="pf"><b class="lbl">ระยะเวลาชำระ:</b> ระยะสั้นไม่เกิน 1 ปี ตามฤดูกาลผลิต</div>
+      </div>
+      <div class="card prod-card b-6"><b class="ptitle">12. โครงการลดเผาอ้อยเกษตรกรชาวไร่อ้อย</b> <span class="dim">ปีบัญชี 2568-2570 · ถึง 30 มี.ค. 2570</span>
+        <div class="pf"><b class="lbl">วัตถุประสงค์:</b> พัฒนาแหล่งน้ำในไร่อ้อยและจัดซื้อเครื่องจักรกลการเกษตรทดแทนการเผา</div>
+        <div class="pf"><b class="lbl">วงเงินต่อราย:</b> สูงสุดรวม 38.05 ล้านบาท/ราย (รวมทุกวัตถุประสงค์ส่วน)</div>
+      </div>
     </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 11-12</span><span class="slide-number" data-current="11" data-total="15"></span></div>
-    <div class="notes">เครื่องหมาย * ในตารางต้นฉบับหมายถึงมีเงื่อนไขเพิ่มเติม ควรตรวจสอบรายละเอียดกับคำรับรองฉบับเต็มก่อนนำเสนอจริง</div>
+    <div class="deck-footer"><span class="dim2">ข้อ 2 ESG</span><span class="slide-number"></span></div>
+    <div class="notes">โครงการสนับสนุนสินเชื่อ ESG ภายใต้ตัวชี้วัดปีบัญชี 2569 — ผลิตภัณฑ์ 7-12 หมายเหตุ: อัตราดอกเบี้ยอิงตาม MRR/MLR ปัจจุบันของธนาคาร</div>
   </section>
-
-  <!-- 12. ข้อ 13 -->
-  <section class="slide center tc" data-title="ข้อ 13 แก้ไขหนี้ SM">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">แก้ไขหนี้ SM ให้กลับมามีสถานะ PL เพื่อลดการกันสำรอง</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
-    <div>
-      <p class="kicker">หมวดที่ 1 · ข้อ 13 (NEW)</p>
-      <div style="font-size:160px;font-weight:900;line-height:1"><span class="counter gradient-text" data-to="5">0</span><span class="gradient-text">%</span></div>
-      <p class="lede" style="margin:14px auto 0">เป้าหมาย ร้อยละ 5 (327 ลบ.) · น้ำหนักคะแนน 3</p>
-    </div>
-    <div class="deck-footer"><span class="dim2">ข้อ 13</span><span class="slide-number" data-current="12" data-total="15"></span></div>
-    <div class="notes">SM = Special Mention (หนี้ที่เริ่มค้างชำระ) การผลักกลับเป็น PL (Performing Loan) ช่วยลดภาระการกันสำรองของสาขา</div>
-  </section>
-
   <!-- 13. หมวดที่ 2 -->
   <section class="slide slide-narrow" data-title="หมวดที่ 2 กระบวนการ">
     <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">นวัตกรรม (Innovation)</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
