@@ -9,10 +9,12 @@
 <link rel="stylesheet" href="assets/animations.css">
 <script src="assets/chart.umd.min.js"></script>
 <style>
-/* Thai-first font stack, system fonts only — no webfont download needed (offline-safe). */
-:root{--font-sans:'Noto Sans Thai','Leelawadee UI','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
-  --font-display:'Noto Sans Thai','Leelawadee UI','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+/* Thai-first font stack, system fonts only — no webfont download needed (offline-safe).
+   Headings use a loopless (ไม่มีหัว) Thai font; body content uses Cordia New. */
+:root{--font-sans:'Cordia New','TH Sarabun New','Leelawadee UI','Noto Sans Thai','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  --font-display:'Leelawadee UI','Noto Sans Thai','Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
   --bg:#e9ebee;--bg-soft:#eef0f3;}
+h3,.h3,h4,.h4,.kicker,.eyebrow{font-family:var(--font-display)}
 .t{width:100%;border-collapse:collapse;font-size:16px}
 .t th,.t td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
 .t th{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);font-weight:600}
@@ -229,9 +231,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 4. ข้อ 1-2 -->
   <section class="slide" data-title="ข้อ 1-2 SME/ESG">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">SME เกษตรหัวขบวนใหม่ &amp; สินเชื่อ ESG</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 1-2</p>
-    <h2 class="h2">SME เกษตรหัวขบวนใหม่ &amp; สินเชื่อ ESG</h2>
     <div class="card mt-l" style="padding:4px 12px">
     <table class="t">
       <thead><tr><th>ตัวชี้วัด</th><th class="num">เป้าหมาย</th><th class="num">น้ำหนักคะแนน</th><th class="num">ผลงานจริง</th><th class="num">คะแนนที่ได้</th></tr></thead>
@@ -248,9 +249,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 5. ข้อ 3-4 -->
   <section class="slide" data-title="ข้อ 3-4 ลูกค้าใหม่/Port Growth">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ลูกค้าสินเชื่อรายใหม่ &amp; การเติบโตสินเชื่อ Port</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 3-4</p>
-    <h2 class="h2">ลูกค้าสินเชื่อรายใหม่ &amp; การเติบโตสินเชื่อ Port</h2>
     <div class="card mt-l" style="padding:4px 12px">
     <table class="t">
       <thead><tr><th>ตัวชี้วัด</th><th class="num">เป้าหมาย</th><th class="num">น้ำหนักคะแนน</th><th class="num">ผลงานจริง</th><th class="num">คะแนนที่ได้</th></tr></thead>
@@ -267,9 +267,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 6. ข้อ 5 -->
   <section class="slide" data-title="ข้อ 5 จ่ายสินเชื่อรายไตรมาส">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">การจ่ายสินเชื่อในปีบัญชี 2569 (รายไตรมาส)</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 5 (NEW)</p>
-    <h2 class="h2">การจ่ายสินเชื่อในปีบัญชี 2569 (รายไตรมาส)</h2>
     <p class="dim">มากกว่าวันชำระหนี้ในแต่ละไตรมาส — เป้าหมาย มากกว่าร้อยละ 3 ทุกไตรมาส</p>
     <div class="card mt-l" style="padding:4px 12px">
     <table class="t">
@@ -287,9 +286,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 7. ข้อ 6.1 -->
   <section class="slide" data-title="ข้อ 6.1 อัตรารับชำระหนี้ สิ้นเดือน 2">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">อัตรารับชำระหนี้ (สำรอง 1%) ณ สิ้นเดือนที่ 2</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 6.1</p>
-    <h2 class="h2">อัตรารับชำระหนี้ (สำรอง 1%) ณ สิ้นเดือนที่ 2</h2>
     <div class="card mt-l" style="height:440px;padding:24px"><canvas id="chart61"></canvas></div>
     <p class="dim2 mt-s" style="font-size:14px">* เป้าหมายร้อยละ 95 ทุกงวดเดือน — เส้นผลงานจริงจะเพิ่มหลังปิดแต่ละงวด</p>
     <div class="deck-footer"><span class="dim2">ข้อ 6.1</span><span class="slide-number" data-current="7" data-total="15"></span></div>
@@ -298,9 +296,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 8. ข้อ 6.2 -->
   <section class="slide" data-title="ข้อ 6.2 อัตรารับชำระหนี้ สิ้นเดือน 3">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">อัตรารับชำระหนี้ ณ สิ้นเดือนที่ 3</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 6.2 (IRDP)</p>
-    <h2 class="h2">อัตรารับชำระหนี้ ณ สิ้นเดือนที่ 3</h2>
     <div class="card mt-l" style="height:440px;padding:24px"><canvas id="chart62"></canvas></div>
     <p class="dim2 mt-s" style="font-size:14px">* เป้าหมายลดหลั่นจากร้อยละ 98.5 → 95.0 → 92.0 → 90.0 ในงวดท้ายปี — เส้นผลงานจริงจะเพิ่มหลังปิดแต่ละงวด</p>
     <div class="deck-footer"><span class="dim2">ข้อ 6.2</span><span class="slide-number" data-current="8" data-total="15"></span></div>
@@ -309,9 +306,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 9. ข้อ 7-8 -->
   <section class="slide" data-title="ข้อ 7-8 รับชำระต้น/ดอกเบี้ยค้าง">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">รับชำระต้นเงิน &amp; ดอกเบี้ยค้างชำระ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 7-8</p>
-    <h2 class="h2">รับชำระต้นเงิน &amp; ดอกเบี้ยค้างชำระ</h2>
     <div class="grid g2 mt-l anim-stagger-list" data-anim-target>
       <div class="card"><p class="eyebrow">ข้อ 7 · รับชำระต้นเงิน+ดอกเบี้ยค้าง (AA) NEW</p><h3 class="mt-s">เพิ่มขึ้นร้อยละ 0.75<br><span class="dim">(ต้นเงินรับรู้รายได้เดิม 67.82%)</span></h3><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
       <div class="card"><p class="eyebrow">ข้อ 8 · รับชำระดอกเบี้ยค้างรับ ไม่รับรู้รายได้เกณฑ์เงินสด (NA)</p><div style="font-size:44px;font-weight:800">514 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>8</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
@@ -322,9 +318,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 10. ข้อ 9-10 -->
   <section class="slide" data-title="ข้อ 9-10 Net NPLs/เงินฝากเพิ่ม">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">คุณภาพหนี้ &amp; การเติบโตเงินฝาก</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 9-10</p>
-    <h2 class="h2">คุณภาพหนี้ &amp; การเติบโตเงินฝาก</h2>
     <div class="grid g2 mt-l anim-stagger-list" data-anim-target>
       <div class="card"><p class="eyebrow">ข้อ 9 · Net NPLs IRDP</p><div style="font-size:44px;font-weight:800">ไม่เกิน 1,928 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
       <div class="card"><p class="eyebrow">ข้อ 10 · เงินรับฝากเพิ่ม (Deposit Growth)</p><div style="font-size:44px;font-weight:800">3,023 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>5</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
@@ -335,9 +330,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 11. ข้อ 11-12 -->
   <section class="slide" data-title="ข้อ 11-12 ค่าธรรมเนียม/หนี้ค้าง 15 เดือน">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">รายได้ค่าธรรมเนียม &amp; การรับชำระหนี้ค้างนาน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 1 · ข้อ 11-12</p>
-    <h2 class="h2">รายได้ค่าธรรมเนียม &amp; การรับชำระหนี้ค้างนาน</h2>
     <div class="grid g2 mt-l anim-stagger-list" data-anim-target>
       <div class="card"><p class="eyebrow">ข้อ 11 · รายได้ค่าธรรมเนียม + เงินฝากสงเคราะห์ชีวิต*</p><div style="font-size:44px;font-weight:800">320 <span style="font-size:22px;font-weight:600">ลบ.</span></div><p class="dim mt-s">น้ำหนักคะแนน <b>6</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
       <div class="card"><p class="eyebrow">ข้อ 12 · อัตรารับชำระสัญญาหนี้ค้างเกิน 15 เดือน ไปเงินสด*</p><div style="font-size:44px;font-weight:800"><span class="counter" data-to="70">0</span>%</div><p class="dim mt-s">น้ำหนักคะแนน <b>8</b> · ผลงานจริง: <i style="color:var(--text-3)">รอข้อมูล</i></p></div>
@@ -348,11 +342,10 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 12. ข้อ 13 -->
   <section class="slide center tc" data-title="ข้อ 13 แก้ไขหนี้ SM">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">แก้ไขหนี้ SM ให้กลับมามีสถานะ PL เพื่อลดการกันสำรอง</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <div>
       <p class="kicker">หมวดที่ 1 · ข้อ 13 (NEW)</p>
       <div style="font-size:160px;font-weight:900;line-height:1"><span class="counter gradient-text" data-to="5">0</span><span class="gradient-text">%</span></div>
-      <h3 class="mt-s">แก้ไขหนี้ SM ให้กลับมามีสถานะ PL<br>เพื่อลดการกันสำรอง</h3>
       <p class="lede" style="margin:14px auto 0">เป้าหมาย ร้อยละ 5 (327 ลบ.) · น้ำหนักคะแนน 3</p>
     </div>
     <div class="deck-footer"><span class="dim2">ข้อ 13</span><span class="slide-number" data-current="12" data-total="15"></span></div>
@@ -361,9 +354,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 13. หมวดที่ 2 -->
   <section class="slide" data-title="หมวดที่ 2 กระบวนการ">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">นวัตกรรม (Innovation)</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">หมวดที่ 2 · กระบวนการ</p>
-    <h2 class="h2">นวัตกรรม (Innovation)</h2>
     <div class="grid g2 mt-l">
       <div class="card card-accent">
         <p class="eyebrow">1. นวัตกรรม</p>
@@ -381,9 +373,8 @@ html[data-preview] .nav-zone{display:none}
 
   <!-- 14. สรุปผลรวม -->
   <section class="slide" data-title="สรุปผลรวม & แผนขับเคลื่อน">
-    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">ธ.ก.ส. สาขาสมุทรปราการ</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
+    <div class="deck-header"><span class="eyebrow"><img class="hdr-logo" src="assets/baac_logo_transparent.png" alt="ธ.ก.ส.">สรุปผลรวมและแผนขับเคลื่อน</span><span class="eyebrow">สรุปตัวชี้วัดฯ ตอ. 2569</span></div>
     <p class="kicker">สรุป · Next steps</p>
-    <h2 class="h2">สรุปผลรวมและแผนขับเคลื่อน</h2>
     <div class="grid g2 mt-l anim-stagger-list" data-anim-target>
       <div class="card">
         <h4>คะแนนรวมที่ได้จริง</h4>
